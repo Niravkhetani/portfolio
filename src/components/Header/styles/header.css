@@ -1,0 +1,20 @@
+.header-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 15px !important;
+}
+.nav-menu-wrapper {
+  @media (min-width: 0px) and (max-width: 980px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+}
