@@ -8,6 +8,8 @@ export const colors = {
   tertiary: "#00A95B",
   quaternary: "#ED4713",
   default: "#999999",
+  default__title: "#b1b2b399",
+  default__description: "#f2f3f499",
   grey__light: "#666666",
   grey__dark: "#19191a",
   white: "#fff",

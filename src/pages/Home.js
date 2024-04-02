@@ -8,10 +8,12 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <About />
-      {/* <FadeSection> */}
-      <Experience />
-      {/* </FadeSection> */}
+      <div className="body-wrapper">
+        <About />
+        {/* <FadeSection> */}
+        <Experience />
+        {/* </FadeSection> */}
+      </div>
     </div>
   );
 };

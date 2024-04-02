@@ -62,6 +62,32 @@ const typography = {
     lineHeight: "68px",
     marginRight: "10px !important",
   },
+  experienceCardTitle: {
+    fontSize: "18px",
+    fontWeight: 600,
+    color: colors.default__title,
+  },
+  experienceCardSubtitle: {
+    fontSize: "14px",
+    fontWeight: 500,
+    color: colors.default__title,
+  },
+  experienceCardDuration: {
+    fontSize: "12px",
+    fontWeight: 400,
+    color: colors.default__title,
+  },
+  experienceCardDescription: {
+    fontSize: "15px",
+    fontWeight: 400,
+    color: colors.default__description,
+    lineHeight: "1.5",
+    // letterSpacing: "0.00938em",
+    // display: "-webkit-box",
+    // "-webkit-line-clamp": "4",
+    // "-webkit-box-orient": "vertical",
+    // height: "82px",
+  },
 };
 
 export default typography;

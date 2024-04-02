@@ -9,3 +9,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.body-wrapper {
+  background-color: rgb(28, 28, 39);
+  width: 100%;
+  /* overflow-x: hidden; */
+}

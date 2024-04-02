@@ -7,6 +7,8 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import ExperienceCard from "../ExperienceCard/ExperienceCard";
+import "./styles/experience.css";
 
 const Experience = () => {
   return (
@@ -32,11 +34,19 @@ const Experience = () => {
     //     <TimelineContent>Sleep</TimelineContent>
     //   </TimelineItem>
     // </Timeline>
-    <Grid container>
-      <Card sx={{background: "yellow"}}>
-        <CardHeader title={"Full Stack Software Developer IEFP Internship"} subheader="Natixis in Portugal" />
-      </Card>
-    </Grid>
+    <div className="experience-grid-wrapper">
+      <div className="experience-grid-container">
+        <Grid container>
+          <Grid xs={3} item />
+          <Grid xs={6} item>
+            <ExperienceCard cardTitle="Full Stack Software Developer IEFP Internship" />{" "}
+            <ExperienceCard cardTitle="Full Stack Software Developer IEFP Internship" />{" "}
+            <ExperienceCard cardTitle="Full Stack Software Developer IEFP Internship" />
+          </Grid>
+          <Grid xs={3} item />
+        </Grid>
+      </div>
+    </div>
   );
 };
 
