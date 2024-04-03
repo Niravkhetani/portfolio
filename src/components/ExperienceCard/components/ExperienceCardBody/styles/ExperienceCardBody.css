@@ -1,10 +1,42 @@
-.experience-card-body-wrapper {
-  /* width: 90rem; */
-  /* max-width: 200px; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  height: 82px;
+/* &:has(.experience-card-body-wrapper:hover) {
+  .card-description {
+    display: block;
+    overflow: unset;
+    text-overflow: none;
+    -webkit-line-clamp: none;
+    -webkit-box-orient: "vertical";
+    height: 100%;
+  }
+} */
+.experience-card-body-wrapper:hover > .card-description {
+  display: block;
+  overflow: unset;
+  text-overflow: none;
+  -webkit-line-clamp: none;
+  -webkit-box-orient: "vertical";
+  height: 100%;
+}
+
+.skill-list-item::before {
+  content: "•";
+  /* display: inline-block; Ensure the bullet appears inline with the list item */
+  width: 10px; /* Set width to maintain proper spacing */
+  color: #f2f3f499;
+}
+.skill-list-ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skill-list-item {
+  margin-left: 5px !important;
+  display: flex;
+  position: inherit;
+  align-items: center;
+}
+.skill-set-wrapper {
+  display: flex;
+  margin-top: 10px !important;
+  align-items: baseline;
+  width: 100%;
 }

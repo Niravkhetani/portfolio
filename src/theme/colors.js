@@ -6,7 +6,7 @@ export const colors = {
   secondary: "#a6a6a6",
   secondary__light: "#f2f3f4",
   tertiary: "#00A95B",
-  quaternary: "#ED4713",
+  quaternary: "#1976d2",
   default: "#999999",
   default__title: "#b1b2b399",
   default__description: "#f2f3f499",
@@ -24,5 +24,5 @@ export const colors = {
   replyWindowColor: "#dcf0e6",
   dividerColor: "#e5e9f0",
   btnText__dark: "#1C2B36",
-  border_color: "#BFBFBF",
+  warning: "#BFBFBF",
 };

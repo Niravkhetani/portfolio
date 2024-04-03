@@ -2,18 +2,18 @@ import React from "react";
 import "./styles/card-header.css";
 import {Typography} from "@mui/material";
 
-const ExperienceCardHeader = ({cardHeaderImg, cardHeaderImgStyle}) => {
+const ExperienceCardHeader = ({cardHeaderImg, cardHeaderImgStyle, title, subTitle, duration}) => {
   return (
     <div className="card-header-wrapper">
       <div className="card-header-container">
         <div style={{display: "flex", gap: "12px"}}>
           <img src={cardHeaderImg} alt="" style={{...cardHeaderImgStyle}} />
           <div>
-            <Typography variant="experienceCardTitle">Full Stack Software Developer IEFP Internship</Typography>
+            <Typography variant="experienceCardTitle">{title}</Typography>
             <br />
-            <Typography variant="experienceCardSubtitle">Natixis in Portugal</Typography>
+            <Typography variant="experienceCardSubtitle">{subTitle}</Typography>
             <br />
-            <Typography variant="experienceCardDuration">Mar 2020 - Jan 2021</Typography>
+            <Typography variant="experienceCardDuration">{duration}</Typography>
           </div>
         </div>
       </div>

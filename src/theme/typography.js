@@ -79,14 +79,26 @@ const typography = {
   },
   experienceCardDescription: {
     fontSize: "15px",
-    fontWeight: 400,
+    fontWeight: 600,
     color: colors.default__description,
     lineHeight: "1.5",
-    // letterSpacing: "0.00938em",
-    // display: "-webkit-box",
-    // "-webkit-line-clamp": "4",
-    // "-webkit-box-orient": "vertical",
-    // height: "82px",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    display: "-webkit-box",
+    "-webkit-line-clamp": "4",
+    "-webkit-box-orient": "vertical",
+  },
+  experienceCardSkillLabel: {
+    fontSize: "16px",
+    color: colors.default__title,
+    fontWeight: "bold",
+  },
+  experienceHeader: {
+    fontSize: "42px",
+    textAlign: "center",
+    fontWeight: 600,
+    marginTop: "20px !important",
+    color: colors.secondary__light,
   },
 };
 
