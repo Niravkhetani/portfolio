@@ -5,6 +5,7 @@ import FadeSection from "../../shared/FadeSection/FadeSection";
 import Experience from "../Experience/Experience";
 import Education from "../Education/Education";
 import Contact from "../Contact/Contact";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <Experience />
           <Education />
           <Contact />
+          <Footer />
         </FadeSection>
       </div>
     </div>

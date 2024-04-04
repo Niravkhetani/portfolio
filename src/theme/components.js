@@ -90,6 +90,29 @@ const components = {
           },
         },
       },
+      {
+        props: {variant: "contact-us"},
+        style: {
+          background: colors.primary,
+          padding: "12px 16px !important",
+          color: colors.secondary__light,
+          borderRadius: "12px",
+          width: "92%",
+          marginTop: "1rem !important",
+          "&:hover": {
+            transform: "scale(1.05)",
+            transition: "all 0.4s ease-in-out 0s",
+            color: colors.secondary__light,
+            background: colors.primary,
+            border: "1px solid rgba(0, 0, 0, 0.25)",
+          },
+          "&:not(:disabled):not(.disabled).active": {
+            color: colors.secondary__light,
+            background: colors.primary,
+            border: "1px solid rgba(0, 0, 0, 0.25)",
+          },
+        },
+      },
     ],
   },
   MuiTextField: {
@@ -109,8 +132,15 @@ const components = {
             border: `1px solid ${colors.primary__lighter};`,
             borderRadius: "12px",
           },
-
-          "& .MuiInputBase-inputMultiline:focus + fieldset": {
+          "& .MuiInputBase-input:hover + textarea": {
+            border: `1px solid ${colors.primary__lighter};`,
+            borderRadius: "12px",
+          },
+          "& .MuiInputBase-multiline:hover + fieldset": {
+            border: `1px solid ${colors.primary__lighter};`,
+            borderRadius: "12px",
+          },
+          "& .MuiInputBase-multiline:focus + fieldset": {
             border: `1px solid ${colors.primary__lighter};`,
             borderRadius: "12px",
           },

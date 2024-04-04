@@ -1,4 +1,4 @@
-import {Box, FormControl, Grid, Input, TextField, Typography} from "@mui/material";
+import {Box, Button, FormControl, Grid, Input, TextField, Typography} from "@mui/material";
 import React from "react";
 import "./styles/ContactUs.css";
 
@@ -27,6 +27,7 @@ const Contact = () => {
                 <TextField className="outlined-border" placeholder="Your Name" />
                 <TextField className="outlined-border" placeholder="Subject" />
                 <TextField className="outlined-border" placeholder="Message" minRows={4} multiline={true} />
+                <Button variant="contact-us">Send</Button>
               </Box>
             </div>
           </div>

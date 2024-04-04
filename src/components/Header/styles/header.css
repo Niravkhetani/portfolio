@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   padding: 15px !important;
+  position: sticky;
 }
 .nav-menu-wrapper {
   @media (min-width: 0px) and (max-width: 980px) {
