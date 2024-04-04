@@ -24,6 +24,7 @@ const typography = {
     fontSize: "1.5rem",
     fontWeight: 400,
     lineHeight: 1.75,
+    color: colors.secondary__light,
   },
   h4: {
     fontSize: "1.25rem",

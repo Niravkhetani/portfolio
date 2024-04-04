@@ -25,4 +25,5 @@ export const colors = {
   dividerColor: "#e5e9f0",
   btnText__dark: "#1C2B36",
   warning: "#BFBFBF",
+  input__border: "#b1b2b3",
 };

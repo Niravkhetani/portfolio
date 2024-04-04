@@ -97,20 +97,30 @@ const components = {
       root: {
         "&.outlined-border": {
           "& fieldset": {
-            border: `1px solid rgba(0, 0, 0, 0.20);`,
-            borderRadius: "2px",
+            border: `1px solid ${colors.input__border}`,
+            borderRadius: "12px",
+          },
+          "& .MuiInputBase-input": {
+            padding: "12px 16px !important",
+            color: colors.secondary__light,
+            borderRadius: "12px",
           },
           "& .MuiInputBase-input:hover + fieldset": {
-            border: `1px solid rgba(0, 0, 0, 0.20);`,
-            borderRadius: "2px",
+            border: `1px solid ${colors.primary__lighter};`,
+            borderRadius: "12px",
+          },
+
+          "& .MuiInputBase-inputMultiline:focus + fieldset": {
+            border: `1px solid ${colors.primary__lighter};`,
+            borderRadius: "12px",
           },
           "& .MuiInputBase-input:focus + fieldset": {
             border: `1px solid ${colors.primary__lighter};`,
-            borderRadius: "2px",
+            borderRadius: "12px",
           },
           "& .Mui-error .MuiOutlinedInput-notchedOutline": {
             border: `1px solid ${colors.primary__lighter} !important`,
-            borderRadius: "2px",
+            borderRadius: "12px",
           },
         },
       },

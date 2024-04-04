@@ -3,3 +3,16 @@
     linear-gradient(141.27deg, rgba(201, 32, 184, 0) 50%, rgb(4, 37, 48) 100%);
   clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 30% 98%, 0px 100%);
 }
+.contact-form {
+  background: rgb(23, 23, 33);
+  min-height: 600px;
+  padding: 15px !important;
+  width: 84%;
+  align-self: center;
+  border-radius: 12px;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+}
+.MuiFormControl-root {
+  width: 92%;
+  margin-top: 1rem !important;
+}
