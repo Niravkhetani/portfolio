@@ -10,22 +10,9 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
 import "./styles/experience.css";
 import TimeLine from "../../components/TimeLine/TimeLine";
+import FadeSection from "../../shared/FadeSection/FadeSection";
 
-const Experience = () => {
-  const skillList = [
-    "Java",
-    "Spring",
-    "Framework",
-    "Docker",
-    "RabbitMQ",
-    "GCP",
-    "MongoDB",
-    "TypeScript",
-    "React.js",
-    "Jira",
-  ];
-  let cardDescription =
-    "As a Junior Full Stack Developer, I worked on projects involving technologies such as Java, Spring Boot, React, RabbitMQ, Docker and GCP. Implementations were delivered efficiently using GitLab for continuous integration and continuous delivery (CI/CD), while we built microservices with Java and microfrontends with React. In addition to actively contributing to the code, I played some important roles in defining problem solutions and maintained solid communication with internal and external teams.";
+const Experience = ({experienceTimeLineHeader, ExperienceInfo}) => {
   return (
     <div className="experience-grid-wrapper">
       <div className="experience-grid-container">
@@ -35,41 +22,24 @@ const Experience = () => {
             <div className="experience-title-wrapper">
               <Typography variant="experienceHeader">Experience</Typography>
               <Typography className="experience-description" variant="experienceCardDescription">
-                My professional journey has been an exciting saga of challenges and valuable learnings. Below are
-                details of my professional experience, where each opportunity has shaped my perspective and honed my
-                skills.
+                {experienceTimeLineHeader ||
+                  "My professional journey has been an exciting saga of challenges and valuable learnings. Below are details of my professional experience, where each opportunity has shaped my perspective and honed my skills."}
               </Typography>
             </div>
-            <TimeLine
-              Content={
-                <ExperienceCard
-                  cardTitle="Full Stack Software Developer IEFP Internship"
-                  cardSubtitle="Natixis in Portugal"
-                  cardDuration="Mar 2022 - Aug 2023"
-                  cardBody={{skillList, description: cardDescription}}
+            {ExperienceInfo.map((ExperienceCardItem) => (
+              <FadeSection>
+                <TimeLine
+                  Content={
+                    <ExperienceCard
+                      cardTitle={ExperienceCardItem.JobRole}
+                      cardSubtitle={ExperienceCardItem.companyName}
+                      cardDuration={`${ExperienceCardItem.startDate} - ${ExperienceCardItem.endDate}`}
+                      cardBody={{skillList: ExperienceCardItem.Skills, description: ExperienceCardItem.description}}
+                    />
+                  }
                 />
-              }
-            />{" "}
-            <TimeLine
-              Content={
-                <ExperienceCard
-                  cardTitle="Full Stack Software Developer IEFP Internship"
-                  cardSubtitle="Natixis in Portugal"
-                  cardDuration="Mar 2022 - Aug 2023"
-                  cardBody={{skillList, description: cardDescription}}
-                />
-              }
-            />{" "}
-            <TimeLine
-              Content={
-                <ExperienceCard
-                  cardTitle="Full Stack Software Developer IEFP Internship"
-                  cardSubtitle="Natixis in Portugal"
-                  cardDuration="Mar 2022 - Aug 2023"
-                  cardBody={{skillList, description: cardDescription}}
-                />
-              }
-            />
+              </FadeSection>
+            ))}
           </Grid>
           <Grid xs={3} item />
         </Grid>

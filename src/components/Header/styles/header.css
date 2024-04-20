@@ -1,9 +1,11 @@
 .header-container {
-  height: 60px;
+  height: 76px;
   display: flex;
   align-items: center;
   padding: 15px !important;
   position: sticky;
+  top: 0px;
+  z-index: 99999 !important;
 }
 .nav-menu-wrapper {
   @media (min-width: 0px) and (max-width: 980px) {
@@ -18,4 +20,7 @@
   align-items: center;
   justify-content: flex-end;
   width: 80%;
+}
+.logo-img {
+  margin-left: -56px !important;
 }

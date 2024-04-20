@@ -4,11 +4,15 @@
   width: 100%;
   clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 30% 98%, 0px 100%);
 }
+.experience-grid-wrapper:after {
+  height: 30em !important;
+}
 .experience-title-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin-bottom: 56px !important;
 }
 .experience-description {
   margin-bottom: 30px !important;
@@ -16,4 +20,7 @@
 }
 .experience-timeline-description-wrapper {
   display: flex;
+}
+.experience-grid-container {
+  padding-bottom: 26px !important;
 }

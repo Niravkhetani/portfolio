@@ -1,8 +1,52 @@
 import {Box, Button, FormControl, Grid, Input, TextField, Typography} from "@mui/material";
-import React from "react";
+import React, {useCallback, useState} from "react";
 import "./styles/ContactUs.css";
+import {NODE_SERVER_URL} from "../../utils/const";
+import axios from "axios";
 
-const Contact = () => {
+const Contact = ({BccEmail}) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onChangeHandler = useCallback((e, name) => {
+    switch (name) {
+      case "name":
+        setName(e.target.value);
+        break;
+      case "email":
+        setEmail(e.target.value);
+        break;
+      case "subject":
+        setSubject(e.target.value);
+        break;
+      case "message":
+        setMessage(e.target.value);
+        break;
+      default:
+        break;
+    }
+  }, []);
+  const onSubmit = async () => {
+    if (name && email && subject && message) {
+      try {
+        const options = {
+          url: `${NODE_SERVER_URL}/${BccEmail}`,
+          method: "GET",
+          body: {name: name, email: email, subject: subject, message: message},
+        };
+        await axios(options);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } catch (err) {
+        console.log("error: ", err);
+      }
+    }
+    console.log("submit", name, email, subject, message);
+  };
   return (
     <div className="contact-us-wrapper">
       <Grid container xs={12}>
@@ -23,11 +67,35 @@ const Contact = () => {
                 >
                   Email Me 📩
                 </Typography>
-                <TextField className="outlined-border" placeholder="Your Email" />
-                <TextField className="outlined-border" placeholder="Your Name" />
-                <TextField className="outlined-border" placeholder="Subject" />
-                <TextField className="outlined-border" placeholder="Message" minRows={4} multiline={true} />
-                <Button variant="contact-us">Send</Button>
+                <TextField
+                  className="outlined-border"
+                  placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => onChangeHandler(e, "email")}
+                />
+                <TextField
+                  className="outlined-border"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => onChangeHandler(e, "name")}
+                />
+                <TextField
+                  className="outlined-border"
+                  placeholder="Subject"
+                  value={subject}
+                  onChange={(e) => onChangeHandler(e, "subject")}
+                />
+                <TextField
+                  className="outlined-border"
+                  placeholder="Message"
+                  minRows={4}
+                  multiline={true}
+                  value={message}
+                  onChange={(e) => onChangeHandler(e, "message")}
+                />
+                <Button variant="contact-us" onClick={() => onSubmit()}>
+                  Send
+                </Button>
               </Box>
             </div>
           </div>

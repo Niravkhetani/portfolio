@@ -5,7 +5,17 @@ import {colors} from "../../theme/colors";
 import {TypeAnimation} from "react-type-animation";
 import {Image} from "@mui/icons-material";
 
-const About = () => {
+const About = ({aboutDescription, cvUrl}) => {
+  const DownloadCV = () => {
+    const pdfUrl = cvUrl || "https://drive.google.com/file/d/18-wrnJALEvh0P75zPVLQG-bhkUI1rNNf/view?usp=sharing";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "NiravKhetaniSoftwareDeveloper.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.target = "_blank";
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <Paper variant="about-bio-info">
       <Grid container>
@@ -39,20 +49,20 @@ const About = () => {
 
           {/* <Typography variant="roles">I am a </Typography> */}
           <Typography variant="h4" sx={{color: colors.secondary, marginBottom: "42px !important"}}>
-            I have strong organizational skills and demonstrate responsibility, proactivity, dynamism and resilience in
-            my work. I have a great ability to adapt to new challenges. I like to analyze problems and evaluate
-            different solutions. I believe that organization is very important in order to achieve personal and
-            professional goals efficiently.
+            {aboutDescription ||
+              "I have strong organizational skills and demonstrate responsibility, proactivity, dynamism and resilience in my work. I have a great ability to adapt to new challenges. I like to analyze problems and evaluate different solutions. I believe that organization is very important in order to achieve personal and professional goals efficiently."}
           </Typography>
-          <Button variant="filled">Check CV</Button>
+          <Button variant="filled" onClick={DownloadCV}>
+            Check CV
+          </Button>
         </Grid>
         <Grid item xs={12} md={6} lg={6} order={{xs: 1, md: 2, lg: 2}} className="profile-pic-grid-wrapper">
           <div>
-            <img
+            {/* <img
               src="https://pedrorfpacheco.github.io/portfolio/static/media/PerfilPedroPacheco.0d7ddda3a293dcf979ac.jpg"
               alt="profile-pic"
               className="profile-image"
-            ></img>
+            ></img> */}
           </div>
         </Grid>
       </Grid>
