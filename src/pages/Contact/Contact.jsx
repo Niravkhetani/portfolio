@@ -32,7 +32,7 @@ const Contact = ({BccEmail}) => {
     if (name && email && subject && message) {
       try {
         const options = {
-          url: `${NODE_SERVER_URL}/${BccEmail}`,
+          url: `${NODE_SERVER_URL}/${email}`,
           method: "GET",
           body: {name: name, email: email, subject: subject, message: message},
         };
