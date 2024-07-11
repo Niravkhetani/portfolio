@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bbc345a.css",
-    "main.js": "/static/js/main.ebcdf3ed.js",
-    "static/js/453.b315aabe.chunk.js": "/static/js/453.b315aabe.chunk.js",
-    "static/media/NiravLogo.png": "/static/media/NiravLogo.3c91f212afd3002afe40.png",
-    "index.html": "/index.html",
-    "main.6bbc345a.css.map": "/static/css/main.6bbc345a.css.map",
-    "main.ebcdf3ed.js.map": "/static/js/main.ebcdf3ed.js.map",
-    "453.b315aabe.chunk.js.map": "/static/js/453.b315aabe.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.6bbc345a.css",
+    "main.js": "/portfolio/static/js/main.f28b647a.js",
+    "static/js/453.b315aabe.chunk.js": "/portfolio/static/js/453.b315aabe.chunk.js",
+    "static/media/NiravLogo.png": "/portfolio/static/media/NiravLogo.3c91f212afd3002afe40.png",
+    "index.html": "/portfolio/index.html",
+    "main.6bbc345a.css.map": "/portfolio/static/css/main.6bbc345a.css.map",
+    "main.f28b647a.js.map": "/portfolio/static/js/main.f28b647a.js.map",
+    "453.b315aabe.chunk.js.map": "/portfolio/static/js/453.b315aabe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6bbc345a.css",
-    "static/js/main.ebcdf3ed.js"
+    "static/js/main.f28b647a.js"
   ]
 }
