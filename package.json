@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "homepage": "https://Niravkhetani.github.io/portfolio",
-    "predeploy": "npm run build",
+    "predeploy": "PUBLIC_URL=\"https://Niravkhetani.github.io/portfolio\" && npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
