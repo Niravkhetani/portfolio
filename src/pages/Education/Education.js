@@ -5,7 +5,7 @@ import ExperienceCard from "../../components/ExperienceCard/ExperienceCard";
 
 const Education = ({educationTitleHeader, educationInfo}) => {
   return (
-    <div className="education-wrapper">
+    <div className="education-wrapper" id="education">
       <Grid container xs={12}>
         <Grid item xs={3}></Grid>
         <Grid item xs={6}>

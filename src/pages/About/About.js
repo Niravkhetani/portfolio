@@ -17,7 +17,7 @@ const About = ({aboutDescription, cvUrl}) => {
     document.body.removeChild(link);
   };
   return (
-    <Paper variant="about-bio-info">
+    <Paper variant="about-bio-info" id="about">
       <Grid container>
         <Grid item xs={12} md={6} lg={6} order={{xs: 2, md: 1, lg: 1}}>
           <Typography variant="greetingHeader" className="about-greeting-header">

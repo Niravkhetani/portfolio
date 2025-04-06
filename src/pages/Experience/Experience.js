@@ -14,7 +14,7 @@ import FadeSection from "../../shared/FadeSection/FadeSection";
 
 const Experience = ({experienceTimeLineHeader, ExperienceInfo}) => {
   return (
-    <div className="experience-grid-wrapper">
+    <div className="experience-grid-wrapper" id="experience">
       <div className="experience-grid-container">
         <Grid container>
           <Grid xs={3} item />

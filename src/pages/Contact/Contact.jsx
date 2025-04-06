@@ -48,7 +48,7 @@ const Contact = ({BccEmail}) => {
     console.log("submit", name, email, subject, message);
   };
   return (
-    <div className="contact-us-wrapper">
+    <div className="contact-us-wrapper" id="contacts">
       <Grid container xs={12}>
         <Grid item xs={3} />
         <Grid item xs={6}>

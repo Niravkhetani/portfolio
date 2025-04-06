@@ -5,38 +5,42 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {colors} from "../../theme/colors";
 
-const Footer = () => {
+const Footer = ({ githubLink, linkedinLink }) => {
   const footerPageList = [
-    {name: "about", label: "About", link: "#about"},
-    {name: "Experience", label: "Experience", link: "#experience"},
-    {name: "Education", label: "Education", link: "#Education"},
-    {name: "contacts", label: "Contacts", link: "#contacts"},
+    { name: 'about', label: 'About', link: '#about' },
+    { name: 'Experience', label: 'Experience', link: '#experience' },
+    { name: 'Education', label: 'Education', link: '#Education' },
+    { name: 'contacts', label: 'Contacts', link: '#contacts' },
   ];
   return (
-    <div style={{height: "7rem"}}>
+    <div style={{ height: '7rem' }}>
       <Grid container>
         <Grid xs={4} item />
         <Grid xs={4} item>
-          <div className="footer-link-wrapper">
+          <div className='footer-link-wrapper'>
             {footerPageList.map((item, idx) => (
-              <Link variant="header-navbar" href={item.link}>
+              <Link variant='header-navbar' href={item.link}>
                 {item.label}
               </Link>
             ))}
           </div>
-          <div className="footer-icon-wrapper">
-            <GitHubIcon
-              variant="outlined"
-              color={"secondary"}
-              style={{width: "1.8em", height: "1.8em"}}
-              sx={{"&:hover": {color: colors.primary__lighter, cursor: "pointer"}}}
-            />
-            <LinkedInIcon
-              variant="outlined"
-              color={"secondary"}
-              style={{width: "1.8em", height: "1.8em"}}
-              sx={{"&:hover": {color: colors.primary__lighter, cursor: "pointer"}}}
-            />
+          <div className='footer-icon-wrapper'>
+            <a href={githubLink}>
+              <GitHubIcon
+                variant='outlined'
+                color={'secondary'}
+                style={{ width: '1.8em', height: '1.8em' }}
+                sx={{ '&:hover': { color: colors.primary__lighter, cursor: 'pointer' } }}
+              />
+            </a>
+            <a href={linkedinLink}>
+              <LinkedInIcon
+                variant='outlined'
+                color={'secondary'}
+                style={{ width: '1.8em', height: '1.8em' }}
+                sx={{ '&:hover': { color: colors.primary__lighter, cursor: 'pointer' } }}
+              />
+            </a>
           </div>
         </Grid>
         <Grid xs={4} item />

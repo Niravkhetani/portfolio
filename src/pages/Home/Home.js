@@ -50,13 +50,13 @@ const Home = () => {
   return (
     <>
       <Header githubLink={githubLink} linkedinLink={linkedinLink} />
-      <div className="body-wrapper">
+      <div className='body-wrapper'>
         <About aboutDescription={about} cvUrl={cvUrl} />
         <FadeSection>
           <Experience experienceTimeLineHeader={experienceTimeLineHeader} ExperienceInfo={ExperienceInfo} />
           <Education educationTitleHeader={educationTitleHeader} educationInfo={educationInfo} />
           <Contact BccEmail={BccEmail} />
-          <Footer />
+          <Footer githubLink={githubLink} linkedinLink={linkedinLink} />
         </FadeSection>
       </div>
     </>
