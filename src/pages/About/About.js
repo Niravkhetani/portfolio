@@ -7,7 +7,7 @@ import {Image} from "@mui/icons-material";
 
 const About = ({aboutDescription, cvUrl}) => {
   const DownloadCV = () => {
-    const pdfUrl = cvUrl || "https://drive.google.com/file/d/18-wrnJALEvh0P75zPVLQG-bhkUI1rNNf/view?usp=sharing";
+    const pdfUrl = cvUrl || "https://drive.google.com/file/d/1u-iAqA0-5DrZFBvEKoMFnU1P7XoGSg6-/view?usp=sharing";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "NiravKhetaniSoftwareDeveloper.pdf"; // specify the filename
