@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://niravkhetani.github.io/portfolio/sitemap.xml
+
+# Block irrelevant paths
+Disallow: /portfolio/assets/
