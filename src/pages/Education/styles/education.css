@@ -1,6 +1,0 @@
-.education-wrapper {
-  background: linear-gradient(38.73deg, rgb(4, 37, 48) 0%, rgba(201, 32, 184, 0) 50%),
-    linear-gradient(141.27deg, rgba(201, 32, 184, 0) 50%, rgb(4, 37, 48) 100%);
-  width: 100%;
-  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 30% 98%, 0px 100%);
-}

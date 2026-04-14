@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════
+   DESIGN TOKENS — Dark + Gold
+═══════════════════════════════════════ */
+:root {
+  --bg:          #0a0a0f;
+  --bg-2:        #0f0f18;
+  --bg-3:        #13131e;
+  --gold:        #d4a843;
+  --gold-light:  #f0c060;
+  --gold-dim:    rgba(212, 168, 67, 0.15);
+  --gold-border: rgba(212, 168, 67, 0.25);
+  --text:        #f0ede8;
+  --text-muted:  rgba(240, 237, 232, 0.55);
+  --text-dim:    rgba(240, 237, 232, 0.3);
+  --white:       #ffffff;
+  --radius:      12px;
+  --radius-lg:   20px;
+  --nav-h:       72px;
+  --font-sans:   'Inter', sans-serif;
+  --font-mono:   'JetBrains Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* Selection */
+::selection { background: rgba(212, 168, 67, 0.25); color: var(--gold-light); }
+
+/* Section shared */
+.section {
+  padding: 100px 80px;
+  position: relative;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* Gold accent line */
+.gold-line {
+  display: inline-block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+/* Card base */
+.card {
+  background: var(--bg-2);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(212, 168, 67, 0.5);
+  box-shadow: 0 8px 40px rgba(212, 168, 67, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section { padding: 80px 40px; }
+}
+@media (max-width: 600px) {
+  .section { padding: 60px 20px; }
+}
+@media (max-width: 400px) {
+  .section { padding: 50px 16px; }
+}
